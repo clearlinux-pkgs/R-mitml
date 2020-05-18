@@ -4,7 +4,7 @@
 #
 Name     : R-mitml
 Version  : 0.3.7
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/mitml_0.3-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mitml_0.3-7.tar.gz
 Summary  : Tools for Multiple Imputation in Multilevel Modeling
@@ -19,28 +19,28 @@ BuildRequires : R-pan
 BuildRequires : buildreq-R
 
 %description
-# mitml
-#### Tools for multiple imputation in multilevel modeling
-This [R](https://www.r-project.org/) package provides tools for multiple imputation of missing data in multilevel modeling.
-It includes a user-friendly interface to the packages `pan` and `jomo`, and several functions for visualization, data management, and the analysis of multiply imputed data sets.
+modeling. Includes a user-friendly interface to the packages 'pan' and 'jomo',
+ and several functions for visualization, data management and the analysis 
+ of multiply imputed data sets.
 
 %prep
 %setup -q -c -n mitml
+cd %{_builddir}/mitml
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584117886
+export SOURCE_DATE_EPOCH=1589773533
 
 %install
-export SOURCE_DATE_EPOCH=1584117886
+export SOURCE_DATE_EPOCH=1589773533
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
