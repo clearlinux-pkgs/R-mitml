@@ -4,7 +4,7 @@
 #
 Name     : R-mitml
 Version  : 0.4.5
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/mitml_0.4-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mitml_0.4-5.tar.gz
 Summary  : Tools for Multiple Imputation in Multilevel Modeling
